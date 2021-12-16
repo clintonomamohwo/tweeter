@@ -1,0 +1,26 @@
+header{
+
+  display: flex;
+  height: 400px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: lavender;
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+
+
+}
+
+.propic{
+  position: relative;
+  display: flex;
+  left: 80px;
+
+}
+
+.proname{
+  position: relative;
+  top: 150px;
+  right: 130px;
+  text-align: center;
+}
