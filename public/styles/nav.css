@@ -1,57 +1,68 @@
 
-#nav-bar {
-  position: fixed;
-  top: 0;
-  height: 120px;
-  width: 100%;
-  background-color: #4056A1;
-  color: #FFFFFF;
-  padding: 0 2em;
-}
-
-
 /*
- * Additional CSS to style the logo (img)
+ * Global layout stuff
  */
 
-#nav-bar .logo {
-  float: left;
-  width: 80px;
-  height: 80px;
-
-}
-
 /*
- * Additional CSS to style the header
+ * Global layout stuff
  */
-
-#nav-bar .header {
-  font-family: Bungee;
-  float: left;
-  font-size: 2em;
-  line-height: 2.5;
-  font-weight: 300;
-  justify-content: left;
-  align-items:end;
-}
-
-.logo{
- 
-}
-
-#nav-bar .lefth {
-  border-radius: 10px;
-  float: right;
-  padding: 1rem;
-  color: #fffde7;
-}
-
-#nav-bar .logo {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    background: #4056a1;
+    color: #ffffff;
+    padding: 1.5em;
+    position: fixed;
+    top: 0%;
+    z-index: 1;
+    width: 100%;
+  }
   
-  width: 80px;
-  height: 80px;
-  float: left;
-  margin-right: 10px;
-  color: #fffde7;
-}
-
+  nav > span {
+    font-family: "Bungee", sans-serif;
+    font-size: 2em;
+  }
+  
+  .writeTweet {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-size: 1em;
+    transition: 0.1s;
+  }
+  
+  .writeTweet:hover {
+    margin-bottom: 10px;
+  }
+  .writeTweet:hover > .arrow {
+    animation: MoveUpDown 1s linear infinite;
+    margin-top: 10px;
+  }
+  .writeTweet:active {
+    background-position: 0 10%;
+    margin-bottom: 0;
+  }
+  
+  .bold {
+    font-weight: 600;
+  }
+  .arrow {
+    margin-top: 10px;
+    font-size: 20px;
+    color: red;
+    animation: MoveUpDown 1s linear 2;
+  }
+  @keyframes MoveUpDown {
+    0%,
+    50% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
